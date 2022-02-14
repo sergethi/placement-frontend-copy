@@ -1,0 +1,55 @@
+.job-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+}
+
+
+.img-responsive {
+    width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+}
+
+.tech-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+span {
+    border: 1px solid red;
+    padding: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+
+/* .col {
+    border: 1px solid;
+} */
+
+@media screen and (max-width: 800px) {
+    .job-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+    .tech-skills {
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+}

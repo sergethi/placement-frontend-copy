@@ -1,0 +1,61 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.top-info {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+}
+
+.top-info-1 {
+    color: green;
+    font-weight: bold;
+    padding: 4px;
+}
+
+.top-info-2 {
+    color: white;
+    font-weight: bold;
+    padding: 4px;
+    background-color: green;
+    border-radius: 40%;
+    width: 40px;
+}
+
+.top-info-3 {
+    color: white;
+    font-weight: bold;
+    padding: 4px;
+    background-color: black;
+    border-radius: 40%;
+    width: 60px;
+}
+
+.role {
+    padding: 4px;
+    font-weight: bold
+}
+
+.more-info-1 {
+    padding: 4px;
+}
+
+.more-info-2 {
+    padding: 4px;
+}
+
+.more-info-3 {
+    padding: 4px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .info {
+        border-bottom: 1px solid gray;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+}
