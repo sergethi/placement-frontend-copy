@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
+  align-content: center;
+  /* max-width: 1840px; */
+  /* width: max-content; */
   justify-content: center;
   /* border: 1px solid red; */
-  
 }
 
 
@@ -13,11 +14,12 @@
   border: 1px solid 
 } */
 
-/* @media screen and (max-width: 800px) {
+@media screen and (max-width: 375px) {
   .container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0px;
 
   }
-} */
+}
