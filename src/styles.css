@@ -8,4 +8,7 @@ body {
     /* background-color: rgb(244, 247, 247); */
     background-color: hsl(180, 52%, 96%);
     /* border: 1px solid; */
+    top: 0;
+    /* position: fixed; */
+    padding-top: 0!important;
   }
