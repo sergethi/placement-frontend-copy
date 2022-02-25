@@ -1,0 +1,22 @@
+[
+    { "name": "Java" },
+    { "name": "JavaScript" },
+    { "name": "Python" },
+    { "name": "C++" },
+    { "name": "Go" },
+    { "name": "C#" },
+    { "name": "PHP" },
+    { "name": "Ruby" },
+    { "name": "SQL" },
+    { "name": "Swift" },
+    { "name": "HTML" },
+    { "name": "CSS" },
+    { "name": "Dart" },
+    { "name": "React" },
+    { "name": "Angular" },
+    { "name": "TypeScript" },
+    { "name": "Kotlin" },
+    { "name": "Objective-C" },
+    { "name": "R" },
+    { "name": "C" }
+]
