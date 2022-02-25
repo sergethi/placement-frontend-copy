@@ -24,7 +24,8 @@
     align-items: center;
     justify-content: flex-start;
     color: #5CA5A5;
-    font-weight: bold;
+    font-weight:900;
+    font-size: 13px;
     padding: 4px 4px 0px 0px;
     margin-right: 10px;
     /* border: 1px solid red; */
@@ -33,7 +34,7 @@
 .top-info-2 {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: center;
     color: white;
     font-weight: bold;
     padding: 4px;
@@ -41,7 +42,8 @@
     margin-right: 8px;
     background-color: #5CA5A5;
     border-radius: 500px;
-    font-size: 15px;
+    font-size: 11px;
+    width: 45px;
 }
 
 .top-info-3 {
@@ -50,17 +52,19 @@
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-size: 11px;
     padding: 4px;
     padding-top: 8px;
     background-color: black;
     border-radius: 500px;
-    /* width: 90px; */
+    width: 70px;
 }
 
 
 .role {
     padding: 4px;
     font-weight: bold;
+    font-size: 18px;
     color: #2B3939;
     /* border: 1px solid; */
     padding-top: 10px;
@@ -74,7 +78,7 @@
 .bullet {
     padding: 4px 6px;
     color: #7C8F8F;
-    font-size: 15px;
+    font-size: 13px;
     /* border: 1px solid; */
 }
 
@@ -101,5 +105,9 @@
         padding-bottom: 20px;
         margin-right: 0px;
         height: 108px;
+    }
+
+    .role {
+        font-size: 15px;
     }
 }

@@ -3,10 +3,11 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-  /* max-width: 1840px; */
-  /* width: max-content; */
   justify-content: center;
   /* border: 1px solid red; */
+  margin-top: 0px;
+  top: 0;
+  /* position:fixed; */
 }
 
 
@@ -20,6 +21,7 @@
     flex-direction: row;
     align-items: center;
     margin: 0px;
+    /* width: 100%; */
 
   }
 }
