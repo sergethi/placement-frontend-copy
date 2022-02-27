@@ -3,6 +3,15 @@
     flex-direction: column;
 }
 
+.filter-dropdown {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.filter-input {
+    height: 1.6rem;
+}
+
 .filter-skill {
     display: flex;
     align-items: center;

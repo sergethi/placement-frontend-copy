@@ -1,9 +1,36 @@
 <div class="filter-container">
     <div class="filter-dropdown">
-        <select>
-            <option *ngFor="let lang of language">{{lang.language}}</option>
-        </select>
+        <form>
+            <input class="filter-input"
+                    list="levels" placeholder="Level" />
+            <datalist id="levels">
+                <option *ngFor="let lvl of level"
+                     [value]="lvl.level">{{lvl.level}}
+                </option>
+            </datalist>
+        </form>
+
+        <form>
+            <input class="filter-input"
+                   list="types" placeholder="Type" />
+            <datalist id="types">
+                <option *ngFor="let typo of type"
+                    [value]="typo.type">{{typo.type}}
+                </option>
+            </datalist>
+        </form>
+
+        <form>
+            <input class="filter-input"
+                   list="languages" placeholder="Language" />
+            <datalist id="languages">
+                <option *ngFor="let lang of language"
+                    [value]="lang.language">{{lang.language}}
+                </option>
+            </datalist>
+        </form>
     </div>
+
     <div class="filter-skill">
         <app-filter-list [skills]=language></app-filter-list>
         <p class="filter-clear">Clear</p>
