@@ -1,5 +1,11 @@
-<h1>filter works@!@!@!@!!</h1>
-<select>
-    <p>there</p>
-    <option *ngFor="let lang of language">{{lang.name}}</option>
-</select>
+<div class="filter-container">
+    <div class="filter-dropdown">
+        <select>
+            <option *ngFor="let lang of language">{{lang.name}}</option>
+        </select>
+    </div>
+    <div class="filter-skill">
+        <app-filter-list [skills]=language></app-filter-list>
+        <p class="filter-clear">Clear</p>
+    </div>
+</div>

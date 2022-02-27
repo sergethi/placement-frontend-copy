@@ -7,7 +7,8 @@ import languages from '../_files/languages.json';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
-  language:{name:String}[]=languages;
+  language = languages;
+  selected: {name: string}[] = [];
 
   constructor() { }
 
