@@ -1,0 +1,13 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-skill {
+    display: flex;
+    align-items: center;
+}
+
+.filter-clear {
+    font-size: 1.0rem;
+}
