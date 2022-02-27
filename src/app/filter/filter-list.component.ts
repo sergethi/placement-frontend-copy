@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./filter-list.component.css']
 })
 export class FilterListComponent implements OnInit {
-  @Input() skills: {name: string}[] = [];
+  @Input() skills: {language: string}[] = [];
 
   constructor() { }
 
