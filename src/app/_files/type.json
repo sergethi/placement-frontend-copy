@@ -1,0 +1,8 @@
+[
+    { "type": "Full-time" },
+    { "type": "Part-time" },
+    { "type": "Contract" },
+    { "type": "Temporary" },
+    { "type": "Volunteer" },
+    { "type": "Internship" }
+]
