@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
 import { InfoComponent } from '../info/info.component';
+import data from "../_files/data.json"
+
+
 @Component({
   selector: 'app-job-card',
   templateUrl: './job-card.component.html',
@@ -9,6 +11,21 @@ import { InfoComponent } from '../info/info.component';
 export class JobCardComponent implements OnInit {
 
   constructor() { }
+  jobsData: { 
+    id: number, 
+    company: String, 
+    logo: String, 
+    new: boolean, 
+    featured: boolean, 
+    position: String,
+    role: String,
+    level: String,
+    postedAt: String,
+    contract: String,
+    location: String,
+    languages: String[],
+    tools: String[] 
+  }[] = data;
 
   ngOnInit(): void {
   }
