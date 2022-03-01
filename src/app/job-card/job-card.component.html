@@ -1,17 +1,26 @@
-<div class='job-card'>
+<div *ngFor="let job of jobsData">
+  <div class='job-card'>
     <div class="col avatar">
-        <img class='img-responsive' src='https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg'>
+        <img class='img-responsive' src={{job.logo}}>
     </div>
-    <app-info></app-info>
-    <div class=' col tech-skills'>
-        <span class=''>Frontend</span>
-        <span class=''>Senior</span>
-        <span class=''>HTML</span>
-        <span class=''>CSS</span>
-        <span class=''>JavaScript</span>
+    <app-info [item]= "job" ></app-info>
+    <div class=' col tech-skills' >
+        <span class=''>{{job.role}}</span>
+        <span class=''>{{job.level}}</span>
+        <span class='' *ngFor="let language of job.languages">{{language}}</span>
+        <span class='' *ngFor="let tool of job.tools">{{tool}}</span>
+        <!-- <span class=''>CSS</span>
+        <span class=''>JavaScript</span> -->
     </div>
+
+</div>
 </div>
 
 
+<!-- 
 
+NOTES
 
+TAKE OUT FOR LOOP AND PUT IT IN APP COMPONENT 
+
+ -->

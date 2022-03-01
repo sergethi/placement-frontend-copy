@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: space-around;
-    width: 266px;
-    height: 88px;
+    align-items: space-between;
+    width: 100%;
+    height: 108px;
+    margin-right: 20px;
     /* border: 1px solid; */
-    font-family: spartan;
 }
 
 .top-info {
@@ -14,31 +14,36 @@
     flex-direction: row;
     padding: 4px;
     padding-left: 0px;
+    /* border: 1px solid; */
+    width: max-content;
     
 }
 
 .top-info-1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: #5CA5A5;
-    font-weight: bold;
-    padding: 4px;
-    padding-left: 0;
-    width: 77px;
+    font-weight:900;
+    font-size: 13px;
+    padding: 4px 4px 0px 0px;
+    margin-right: 10px;
+    /* border: 1px solid red; */
 }
 
 .top-info-2 {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     color: white;
     font-weight: bold;
     padding: 4px;
+    padding-top: 8px;
     margin-right: 8px;
     background-color: #5CA5A5;
     border-radius: 500px;
-    width: 51px;
+    font-size: 11px;
+    width: 45px;
 }
 
 .top-info-3 {
@@ -47,35 +52,47 @@
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-size: 11px;
     padding: 4px;
+    padding-top: 8px;
     background-color: black;
     border-radius: 500px;
-    width: 79px;
+    width: 70px;
 }
-.top-info-1, 
-.top-info-2, 
-.top-info-3 {
-    padding-right: 8px;
-}
+
 
 .role {
     padding: 4px;
     font-weight: bold;
+    font-size: 18px;
     color: #2B3939;
-    font-family: spartan;
+    /* border: 1px solid; */
+    padding-top: 10px;
+    padding-left: 0px;
 }
+
 
 .more-info-1, 
 .more-info-2, 
 .more-info-3, 
 .bullet {
-    padding: 4px;
+    padding: 4px 6px;
     color: #7C8F8F;
-    font-size: 15px;
+    font-size: 13px;
+    /* border: 1px solid; */
+}
+
+.more-info-1 {
+    padding-left: 0px;
 }
 
 .bullet {
     font-weight: 100;
+}
+
+.more-info {
+    padding-top: 10px;
+    padding-bottom: 0;
 }
 
 
@@ -84,8 +101,13 @@
     .info {
         align-items: start;
         justify-content: space-around;
-        /* border-bottom: 1px solid gray; */
-        padding-bottom: 10px;
-        /* margin-bottom: 8px; */
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+        margin-right: 0px;
+        height: 108px;
+    }
+
+    .role {
+        font-size: 15px;
     }
 }
