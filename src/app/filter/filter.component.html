@@ -31,6 +31,28 @@
         </form>
     </div>
 
+    <div class="filter-droptest">
+        <form class="filter-form">
+            <select class="filter-search" multiple>
+                <optgroup label="Levels">
+                    <option *ngFor="let lvl of level"
+                        [value]="lvl.level">{{lvl.level}}
+                    </option>
+                </optgroup>
+                <optgroup label="Types">
+                    <option *ngFor="let typo of type"
+                        [value]="typo.type">{{typo.type}}
+                    </option>
+                </optgroup>
+                <optgroup label="Languages">
+                    <option *ngFor="let lang of language"
+                        [value]="lang.language">{{lang.language}}
+                    </option>
+                </optgroup>
+            </select>
+        </form>
+    </div>
+
     <div class="filter-skill">
         <app-filter-list [skills]=language></app-filter-list>
         <p class="filter-clear">Clear</p>
