@@ -5,11 +5,10 @@
   align-content: center;
   justify-content: center;
   /* border: 1px solid red; */
-  margin-top: 0px;
-  top: 0;
-  /* position:fixed; */
+  /* margin-top: 0px; */
+  /* top: 0px; */
+  width: 100%;
 }
-
 
 /* .row {
   border: 1px solid 
@@ -22,6 +21,5 @@
     align-items: center;
     margin: 0px;
     /* width: 100%; */
-
   }
 }

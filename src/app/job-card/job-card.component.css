@@ -11,6 +11,7 @@
     box-shadow: 3px 6px 20px -2px #9bc4c4;
     border-radius: 3px;
     border-left: 5px solid #5CA5A5;
+    background-color: white;
 }
 
 .avatar {
@@ -37,6 +38,20 @@
     font-size: 13px;
     /* width: 100vh */
     /* border: 1px solid */
+}
+
+.tech-skills span {
+    background-color: hsl(180, 52%, 96%);
+    /* border: 1px solid; */
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tech-skills span:hover {
+    background-color: #5CA5A5;
+    color: white;
 }
 
 span {
@@ -69,6 +84,13 @@ span {
         min-height: max-content;
         /* border-top: 1px solid gray; */
         padding-left: 0px;
+    }
+
+    .tech-skills span {
+        padding: 6px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: 3px;
     }
 
     .avatar {
