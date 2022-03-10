@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoComponent } from '../info/info.component';
 import data from "../_files/data.json"
 
@@ -9,6 +9,8 @@ import data from "../_files/data.json"
   styleUrls: ['./job-card.component.css']
 })
 export class JobCardComponent implements OnInit {
+  @Input() 
+  job: any;
 
   constructor() { }
   jobsData: { 
