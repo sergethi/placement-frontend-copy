@@ -1,60 +1,87 @@
 <div class="filter-container">
-    <div class="filter-dropdown">
-        <form>
-            <input class="filter-input"
-                    list="levels" placeholder="Level" />
-            <datalist id="levels">
-                <option *ngFor="let lvl of level"
-                     [value]="lvl.level">{{lvl.level}}
-                </option>
-            </datalist>
-        </form>
+  <!-- <div class="filter-dropdown">
+    <form>
+      <input class="filter-input"
+        list="levels" placeholder="Level" />
+      <datalist id="levels">
+        <option *ngFor="let lvl of level"
+          [value]="lvl.level">{{lvl.level}}
+        </option>
+      </datalist>
+    </form>
 
-        <form>
-            <input class="filter-input"
-                   list="types" placeholder="Type" />
-            <datalist id="types">
-                <option *ngFor="let typo of type"
-                    [value]="typo.type">{{typo.type}}
-                </option>
-            </datalist>
-        </form>
+    <form>
+      <input class="filter-input"
+        list="types" placeholder="Type" />
+      <datalist id="types">
+        <option *ngFor="let typo of typa"
+          [value]="typo.type">{{typo.type}}
+        </option>
+      </datalist>
+    </form>
 
-        <form>
-            <input class="filter-input"
-                   list="languages" placeholder="Language" />
-            <datalist id="languages">
-                <option *ngFor="let lang of language"
-                    [value]="lang.language">{{lang.language}}
-                </option>
-            </datalist>
-        </form>
+    <form>
+      <input class="filter-input"
+        list="languages" placeholder="Language" />
+      <datalist id="languages">
+        <option *ngFor="let lang of language"
+          [value]="lang.language">{{lang.language}}
+        </option>
+      </datalist>
+    </form>
+  </div> -->
+
+  <!-- <app-filter-list [skills]=language></app-filter-list> -->
+
+  <!-- <div class="filter-droptest">
+    <form class="filter-form">
+      <select class="filter-search" multiple>
+        <optgroup label="Levels">
+          <option *ngFor="let lvl of level"
+            [value]="lvl.level">{{lvl.level}}
+          </option>
+        </optgroup>
+        <optgroup label="Types">
+          <option *ngFor="let typo of typa"
+            [value]="typo.type">{{typo.type}}
+          </option>
+        </optgroup>
+        <optgroup label="Languages">
+          <option *ngFor="let lang of language"
+            [value]="lang.language">{{lang.language}}
+          </option>
+        </optgroup>
+      </select>
+    </form>
+  </div> -->
+
+  <!-- <div class="filter-input-test"> -->
+    <div *ngIf="selectedSkills.length > 0" class="filter-skill">
+      <app-filter-list
+        [selectedSkills]="selectedSkills"
+        [deleteSkill]="removeSkill"></app-filter-list>
+      <p class="filter-clear" (click)="this.clearSelectedSkills()">Clear all</p>
     </div>
 
-    <div class="filter-droptest">
-        <form class="filter-form">
-            <select class="filter-search" multiple>
-                <optgroup label="Levels">
-                    <option *ngFor="let lvl of level"
-                        [value]="lvl.level">{{lvl.level}}
-                    </option>
-                </optgroup>
-                <optgroup label="Types">
-                    <option *ngFor="let typo of type"
-                        [value]="typo.type">{{typo.type}}
-                    </option>
-                </optgroup>
-                <optgroup label="Languages">
-                    <option *ngFor="let lang of language"
-                        [value]="lang.language">{{lang.language}}
-                    </option>
-                </optgroup>
-            </select>
-        </form>
-    </div>
+    <input type="text"  placeholder="Filter"
+      [value]="this.inputValue" (input)="this.inputValue=getValue($event)"
+      (focus)="focused()" (blur)="unfocused()"
+      (keyup.enter)="addSkill($event.target)" />
 
-    <div class="filter-skill">
-        <app-filter-list [skills]=language></app-filter-list>
-        <p class="filter-clear">Clear</p>
+    <div class="filter-display" >
+      <ul class="filter-level">
+        <li><strong>Levels</strong></li>
+        <li *ngFor="let lvl of level">{{lvl.level}}</li>
+      </ul>
+      <ul class="filter-type">
+        <li><strong>Types</strong></li>
+        <li *ngFor="let typo of typa">{{typo.type}}</li>
+      </ul>
+      <ul class="filter-language">
+        <li><strong>Languages</strong></li>
+        <li *ngFor="let lang of language">{{lang.language}}</li>
+      </ul>
     </div>
+  <!-- </div> -->
+
 </div>
