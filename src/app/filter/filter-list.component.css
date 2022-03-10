@@ -1,21 +1,23 @@
 .filter-list-container {
-    display: inline-flex;
-    margin: .3rem;
+  display: inline-flex;
+  margin: .3rem;
 }
 .filter-list-skill, .filter-list-close {
-    margin: 0;
-    padding: .3rem;
-    font-size: .8rem;
+  margin: 0;
+  padding: .3rem;
+  padding-bottom: .2rem;
+  height: 1.3rem;
+  font-size: 1.0rem;
 }
 
 .filter-list-skill {
-    background-color: #999;
-    color: black;
-    border-radius: 5px 0px 0px 5px;
+  background-color: #999;
+  color: black;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .filter-list-close {
-    background-color: black;
-    color: white;
-    border-radius: 0px 5px 5px 0px;
+  background-color: black;
+  color: white;
+  border-radius: 0px 5px 5px 0px;
 }

@@ -1,44 +1,85 @@
 .filter-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  border: 2px solid red;
 }
 
 .filter-dropdown {
-    display: flex;
-    justify-content: space-around; 
+  display: flex;
+  justify-content: space-around; 
 }
 
 .filter-input {
-    height: 1.6rem;
+  height: 1.6rem;
 }
 
 .filter-skill {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .filter-clear {
-    font-size: 1.0rem;
+  display: flex;
+  font-size: 1.3rem;
+  padding: .6rem;
 }
 
 .filter-droptest {
-    margin: 30px;
-    display: flex;
-    justify-content: center;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .filter-form {
-    display: flex;
-    justify-content: center;
-    flex: 1;
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .filter-search {
-    height: 5rem;
-    width: 50%;
+  height: 5rem;
+  width: 50%;
 }
 
 .filter-search:focus {
-    position: absolute;
-    height: 15rem;
+  position: absolute;
+  height: 15rem;
+}
+
+.filter-input-test {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-container input {
+  height: 1.7rem;
+  font-size: 1.3rem;
+}
+
+.filter-display {
+  display: none;
+  justify-content: space-evenly;
+}
+
+.filter-display ul li{
+  list-style-type: none;
+  font-size: 1.0rem;
+}
+
+.filter-display ul li:hover {
+  background-color: lightgray;
+}
+
+.filter-display ul:last-child {
+  -moz-column-count: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
 }
