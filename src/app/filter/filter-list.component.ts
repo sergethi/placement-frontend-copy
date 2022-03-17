@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Jobs } from './filter.component';
 
 @Component({
   selector: 'app-filter-list',
@@ -7,11 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FilterListComponent implements OnInit {
   @Input() selectedSkills: string[];
-  @Input() deleteSkill: (talent: string) => void;
+  @Output() selectedSkillsChange = new EventEmitter<string[]>();
+  @Input() listOfJobs: Jobs[];
+  @Input() filtedJobs: Jobs[];
+  @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
+  @Input() jobFilter: void;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  removeSkill(talent: string): void {
+    this.selectedSkills = this.selectedSkills
+                            .filter(word => word !== talent);
+    this.selectedSkillsChange.emit(this.selectedSkills);
+    this.jobFilter;
+    this.filtedJobsChange.emit(this.filtedJobs);
   }
-
 }

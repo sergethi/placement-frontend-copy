@@ -18,12 +18,14 @@
 .filter-skill {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .filter-clear {
   display: flex;
   font-size: 1.3rem;
   padding: .6rem;
+  cursor: pointer;
 }
 
 .filter-droptest {

@@ -4,13 +4,31 @@ import levels from '../_files/levels.json';
 import types from '../_files/types.json';
 import data from "./../_files/data.json";
 
+export interface Jobs {
+  id: number;
+  company: String;
+  logo: String;
+  new: boolean;
+  featured: boolean;
+  position: String;
+  role: String;
+  level: String;
+  postedAt: String;
+  contract: String;
+  location: String;
+  languages: String[];
+  tools: String[];
+}
+
 interface Filter {
-  inputValue: string;
+  listOfJobs: Jobs[];
+  filtedJobs: Jobs[];
   selectedSkills: string[];
+  inputValue: string;
+  clickSkill(talent: string): void;
   addSkill(event: EventTarget | null): void;
-  removeSkill(talent: string): void;
   clearSelectedSkills(): void;
-  filterJobs(): void;
+  jobFilter(): void;
   getValue(event: Event): string;
 }
 
@@ -23,15 +41,14 @@ export class FilterComponent implements OnInit, Filter {
   language = languages;
   level = levels;
   typa = types;
-  listOfJobs = data;
-  inputValue = "";
+  listOfJobs: Jobs[] = data;
+  filtedJobs: Jobs[] = [];
   selectedSkills: string[];
+  inputValue: string = "";
 
-  constructor() {
-    this.selectedSkills = ["Java", "JavaScript", "Python", "C++"]
+  ngOnInit(): void {
+    this.selectedSkills = ["Java", "JavaScript", "Python", "C++"];
   }
-
-  ngOnInit(): void {}
   unfocused(): void {
     const filterList = (<HTMLElement>document
                           .getElementsByClassName("filter-display")[0])
@@ -40,33 +57,40 @@ export class FilterComponent implements OnInit, Filter {
   focused(): void {
     const filterList = (<HTMLElement>document
                           .getElementsByClassName("filter-display")[0])
-                          .style.display="flex";
+                          .style.display = "flex";
   }
-  addSkill(event: EventTarget | null): void {
-    console.log('addSkill', event);
+  clickSkill(talent: string): void {
+    this.inputValue = talent;
+    this.addSkill();
+  }
+  addSkill(): void {
     this.selectedSkills.push(this.inputValue);
     this.inputValue = "";
-    // this.filterJobs();
-  }
-  removeSkill(talent: string): void {
-    console.log("selectedSkills: ", this.selectedSkills);
-    // this.selectedSkills = ["French", "German"];
-    // console.log("selectedSkills: ", this.selectedSkills);
-    // console.log('removeSkill');
-    // console.log("talent: ", talent);
-
-    this.selectedSkills = this.selectedSkills
-                            .filter(word => word !== talent);
-    this.filterJobs();
+    this.jobFilter();
   }
   clearSelectedSkills(): void {
-    console.log('clearSelectedSkills');
     this.selectedSkills = [];
+    this.jobFilter();
   }
-  filterJobs() {
-    console.log('filterJobs');
+  jobFilter(): void {
+    if (this.selectedSkills.length < 1) {
+      this.filtedJobs = this.listOfJobs;
+      return;
+    }
+    this.filtedJobs = this.listOfJobs.filter((obj) => {
+      const { position, role, level, languages, tools } = obj;
+      const concat = `${position} ${role} ${level} ` +
+                     `${languages.join(' ')} ${tools.join(' ')}`;
+      const str = concat.toLowerCase();
+      for (let skill of this.selectedSkills) {
+        if (str.includes(skill.toLowerCase())) {
+          return true;
+        }
+      }
+      return false;
+    });
   }
   getValue(event: Event): string {
-   return (event.target as HTMLInputElement).value;
+    return (event.target as HTMLInputElement).value;
   }
 }
