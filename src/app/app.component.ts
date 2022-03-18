@@ -24,3 +24,5 @@ export class AppComponent {
     tools: String[] 
   }[] = data;
 }
+
+// https://github.com/cesarsnina/placement
