@@ -1,5 +1,4 @@
-<div *ngFor="let job of jobsData">
-  <div class='job-card'>
+  <div class='job-card' [ngStyle]="{'border-left': job.featured === true ? '7px solid #5CA5A5' : 'none'}">
     <div class="col avatar">
         <img class='img-responsive' src={{job.logo}}>
     </div>
@@ -9,18 +8,5 @@
         <span class=''>{{job.level}}</span>
         <span class='' *ngFor="let language of job.languages">{{language}}</span>
         <span class='' *ngFor="let tool of job.tools">{{tool}}</span>
-        <!-- <span class=''>CSS</span>
-        <span class=''>JavaScript</span> -->
     </div>
-
-</div>
-</div>
-
-
-<!-- 
-
-NOTES
-
-TAKE OUT FOR LOOP AND PUT IT IN APP COMPONENT 
-
- -->
+  </div>

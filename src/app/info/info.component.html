@@ -1,8 +1,12 @@
   <div class=' col info' >
     <div class='top-info' >
         <span class='top-info-1' >{{item.company}}</span>
-        <span class='top-info-2'>NEW!</span>
-        <span class='top-info-3'>FEATURED</span>
+        <ng-template [ngIf]="item.new">
+          <span class='top-info-2'>NEW!</span>
+        </ng-template>
+        <ng-template [ngIf]="item.featured">
+          <span class='top-info-3'>FEATURED</span>
+        </ng-template>
     </div>
     <div class='title'>
         <span class='role'>{{item.position}}</span>

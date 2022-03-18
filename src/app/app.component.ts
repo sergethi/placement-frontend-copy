@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-// import { infoList } from './_files/info.json';
-import info from "./_files/info.json";
+import data from "./_files/data.json"
 
 @Component({
   selector: 'app-root',
@@ -9,5 +8,19 @@ import info from "./_files/info.json";
 })
 export class AppComponent {
   title = 'Placement';
-  infoList:{name:String, code:String}[]=info;
+  jobsData: { 
+    id: number, 
+    company: String, 
+    logo: String, 
+    new: boolean, 
+    featured: boolean, 
+    position: String,
+    role: String,
+    level: String,
+    postedAt: String,
+    contract: String,
+    location: String,
+    languages: String[],
+    tools: String[] 
+  }[] = data;
 }
