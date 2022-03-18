@@ -12,14 +12,15 @@ export class FilterListComponent implements OnInit {
   @Input() listOfJobs: Jobs[];
   @Input() filtedJobs: Jobs[];
   @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
-  @Input() jobFilter: void;
+  @Input() jobFilter: () => void;
 
   ngOnInit(): void {}
+  // remove skill by clicking the X button
   removeSkill(talent: string): void {
     this.selectedSkills = this.selectedSkills
                             .filter(word => word !== talent);
     this.selectedSkillsChange.emit(this.selectedSkills);
-    this.jobFilter;
+    this.jobFilter();
     this.filtedJobsChange.emit(this.filtedJobs);
   }
 }

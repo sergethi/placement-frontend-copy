@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import languages from '../_files/languages.json';
 import levels from '../_files/levels.json';
 import types from '../_files/types.json';
@@ -46,32 +46,41 @@ export class FilterComponent implements OnInit, Filter {
   selectedSkills: string[];
   inputValue: string = "";
 
+  // pre-select skills and filter jobs
   ngOnInit(): void {
-    this.selectedSkills = ["Java", "JavaScript", "Python", "C++"];
+    this.selectedSkills = ["HTML", "CSS", "Python"];
+    this.jobFilter();
   }
+  // hides the dropdown
   unfocused(): void {
     const filterList = (<HTMLElement>document
                           .getElementsByClassName("filter-display")[0])
                           .style.display = "none";
   }
+  // show the dropdown
   focused(): void {
     const filterList = (<HTMLElement>document
                           .getElementsByClassName("filter-display")[0])
                           .style.display = "flex";
   }
+  // add skill by clicking on the dropdown
   clickSkill(talent: string): void {
     this.inputValue = talent;
     this.addSkill();
   }
+  // add skill by typing in the input field
   addSkill(): void {
     this.selectedSkills.push(this.inputValue);
     this.inputValue = "";
     this.jobFilter();
   }
+  // remove all the selected skills by clicking clear all
   clearSelectedSkills(): void {
     this.selectedSkills = [];
     this.jobFilter();
   }
+  // check if user seleted a skill and display all job if not
+  // filter the list of jobs by the skill selected
   jobFilter(): void {
     if (this.selectedSkills.length < 1) {
       this.filtedJobs = this.listOfJobs;
@@ -90,6 +99,7 @@ export class FilterComponent implements OnInit, Filter {
       return false;
     });
   }
+  // retrieve the value from the input field
   getValue(event: Event): string {
     return (event.target as HTMLInputElement).value;
   }
