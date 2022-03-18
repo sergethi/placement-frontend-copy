@@ -1,0 +1,20 @@
+[
+    { "language": "Java" },
+    { "language": "JavaScript" },
+    { "language": "Python" },
+    { "language": "C++" },
+    { "language": "Golang" },
+    { "language": "C#" },
+    { "language": "PHP" },
+    { "language": "Ruby" },
+    { "language": "SQL" },
+    { "language": "Swift" },
+    { "language": "HTML" },
+    { "language": "CSS" },
+    { "language": "Dart" },
+    { "language": "React" },
+    { "language": "Angular" },
+    { "language": "TypeScript" },
+    { "language": "Kotlin" },
+    { "language": "Objective-C" }
+]

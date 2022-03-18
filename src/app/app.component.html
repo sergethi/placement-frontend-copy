@@ -2,6 +2,9 @@
   <div class='row'>
     <app-banner></app-banner>
   </div>
+  <div class="row">
+    <app-filter></app-filter>
+  </div>
   <div class='row' *ngFor="let job of jobsData">
     <app-job-card class='list' [job]= "job"></app-job-card>
   </div>
