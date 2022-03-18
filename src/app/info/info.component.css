@@ -95,7 +95,20 @@
     padding-bottom: 0;
 }
 
+@media screen and (max-width:1070px){
+    .info {
+        align-items: start;
+        justify-content: space-around;
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+        margin-right: 0px;
+    
+    }
 
+    .role {
+        font-size: 15px;
+    }
+}
 
 @media screen and (max-width: 800px) {
     .info {

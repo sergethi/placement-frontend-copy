@@ -18,7 +18,7 @@
 @media screen and (max-width: 375px) {
   .container {
     display: flex;
-    /* flex-direction: row; */
+    /* flex-direction: erow; */
     align-items: center;
     margin: 0px;
     /* width: 100%; */
