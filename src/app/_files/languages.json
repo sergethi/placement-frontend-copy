@@ -16,7 +16,5 @@
     { "language": "Angular" },
     { "language": "TypeScript" },
     { "language": "Kotlin" },
-    { "language": "Objective-C" },
-    { "language": "R" },
-    { "language": "C" }
+    { "language": "Objective-C" }
 ]

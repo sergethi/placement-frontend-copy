@@ -1,8 +1,9 @@
 [
     { "level": "Internship" },
     { "level": "Entry" },
-    { "level": "Associate" },
-    { "level": "Mid-Senior" },
+    { "level": "Junior" },
+    { "level": "Midweight" },
+    { "level": "Senior" },
     { "level": "Director" },
     { "level": "Executive" }
 ]
