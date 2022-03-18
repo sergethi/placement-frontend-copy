@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { infoList } from './_files/info.json';
 import data from "./_files/data.json"
 
 @Component({

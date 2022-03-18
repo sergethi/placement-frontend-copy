@@ -7,6 +7,8 @@ import { BannerComponent } from './banner/banner.component';
 import { JobCardComponent } from './job-card/job-card.component';
 import { InfoComponent } from './info/info.component';
 import { TestComponent } from './test/test.component';
+import { FilterComponent } from './filter/filter.component';
+import { FilterListComponent } from './filter/filter-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { TestComponent } from './test/test.component';
     BannerComponent,
     JobCardComponent,
     InfoComponent,
-    TestComponent
+    TestComponent,
+    FilterComponent,
+    FilterListComponent
   ],
   imports: [
     BrowserModule,
