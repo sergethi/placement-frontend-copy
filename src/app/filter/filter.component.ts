@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import languages from '../_files/languages.json';
 import levels from '../_files/levels.json';
 import types from '../_files/types.json';
@@ -43,6 +43,7 @@ export class FilterComponent implements OnInit, Filter {
   typa = types;
   listOfJobs: Jobs[] = data;
   filtedJobs: Jobs[] = [];
+  @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
   selectedSkills: string[];
   inputValue: string = "";
 
@@ -84,6 +85,7 @@ export class FilterComponent implements OnInit, Filter {
   jobFilter(): void {
     if (this.selectedSkills.length < 1) {
       this.filtedJobs = this.listOfJobs;
+      this.filtedJobsChange.emit(this.filtedJobs);
       return;
     }
     this.filtedJobs = this.listOfJobs.filter((obj) => {
@@ -98,6 +100,12 @@ export class FilterComponent implements OnInit, Filter {
       }
       return false;
     });
+    this.filtedJobsChange.emit(this.filtedJobs);
+  }
+  // send list of job to the parent component (app.component)
+  updateJobs(newList: Jobs[]): void {
+    this.filtedJobs = newList;
+    this.filtedJobsChange.emit(this.filtedJobs);
   }
   // retrieve the value from the input field
   getValue(event: Event): string {

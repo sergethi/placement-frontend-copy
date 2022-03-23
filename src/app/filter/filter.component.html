@@ -61,7 +61,8 @@
         [(selectedSkills)]="selectedSkills"
         [(filtedJobs)]="filtedJobs"
         [listOfJobs]="listOfJobs"
-        [jobFilter]="jobFilter">
+        [jobFilter]="jobFilter"
+        (filtedJobsChange)="updateJobs($event)">
       </app-filter-list>
       <p class="filter-clear" (click)="clearSelectedSkills()">Clear</p>
     </div>

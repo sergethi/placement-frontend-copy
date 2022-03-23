@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import data from "./_files/data.json"
+import data from "./_files/data.json";
+import { Jobs } from "./filter/filter.component";
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,11 @@ export class AppComponent {
     languages: String[],
     tools: String[] 
   }[] = data;
+  filtedJobs: Jobs[] = [];
+
+  updateJobs(newList: Jobs[]): void {
+    this.filtedJobs = newList;
+  }
 }
 
 // https://github.com/cesarsnina/placement
