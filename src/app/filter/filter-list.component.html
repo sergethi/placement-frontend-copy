@@ -1,0 +1,9 @@
+<div class="filter-list-container" *ngFor="let skill of selectedSkills">
+  <p class="filter-list-skill">
+    {{skill}}
+  </p>
+  <p class="filter-list-close"
+      (click)="this.removeSkill(skill)">
+    X
+  </p>
+</div>
