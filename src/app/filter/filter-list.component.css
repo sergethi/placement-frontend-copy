@@ -1,6 +1,8 @@
 .filter-list-container {
-  display: inline-flex;
+  display: inlin-flex;
   margin: .3rem;
+  border-radius: 4px;
+  /* border: 1px solid; */
 }
 .filter-list-skill, .filter-list-close {
   margin: 0;
@@ -11,14 +13,26 @@
 }
 
 .filter-list-skill {
-  background-color: #999;
-  color: black;
-  border-radius: 5px 0px 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5CA5A5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
 }
 
 .filter-list-close {
-  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5CA5A5;
+  font-weight: bolder;
   color: white;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 4px 4px 0px;
   cursor: pointer;
+}
+
+.filter-list-container:hover .filter-list-close {
+  background-color: black;
 }
