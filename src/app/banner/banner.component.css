@@ -19,10 +19,12 @@
   display: none;
 }
 
-@media screen and (max-width: 900px) {
+/* changed max-width from 900 to 500 */
+@media screen and (max-width: 500px) {
   .toolbar {
     width: 100%;
     margin-bottom: 20px;
+    direction: ltr;
   }
   #schedule_link_pc {
     display: none;
@@ -32,3 +34,25 @@
     display: inline-block;
   }
 }
+
+/* @media screen and (min-width: 1008px) {
+  .toolbar {
+    width: 100%;
+    margin-bottom: 20px;
+    align-content: flex-end;
+  }
+  path {
+    width: 100%;
+  }
+  #schedule_link_pc {
+    display: none;
+  }
+
+  #schedule_link_mobile {
+    display: none;
+  }
+
+  #schedule_link_pc_larger {
+    display: inline-block;
+  }
+} */
