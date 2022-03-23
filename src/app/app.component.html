@@ -3,9 +3,11 @@
     <app-banner></app-banner>
   </div>
   <div class="row">
-    <app-filter></app-filter>
+    <app-filter
+      (filtedJobsChange)="updateJobs($event)">
+    </app-filter>
   </div>
-  <div class='row' *ngFor="let job of jobsData">
+  <div class='row' *ngFor="let job of filtedJobs">
     <app-job-card class='list' [job]= "job"></app-job-card>
   </div>
 </div>  
