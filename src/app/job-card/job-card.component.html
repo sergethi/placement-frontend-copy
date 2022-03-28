@@ -1,6 +1,6 @@
   <div class='job-card' [ngStyle]="{'border-left': job.featured === true ? '7px solid #5CA5A5' : 'none'}">
     <div class="col avatar">
-        <img class='img-responsive' src={{job.logo}}>
+        <img class='img-responsive' src={{job.logo}} alt={{job.company}} title={{job.company}}>
     </div>
     <div class="job-info-skills">
         <app-info [item]= "job" ></app-info>

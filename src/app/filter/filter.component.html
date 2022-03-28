@@ -94,3 +94,39 @@
   </div> -->
 
   <!-- <div class="filter-input-test"> -->
+
+    <div *ngIf="selectedSkills.length > 0" class="filter-skill">
+      <app-filter-list
+        [(selectedSkills)]="selectedSkills"
+        [(filtedJobs)]="filtedJobs"
+        [listOfJobs]="listOfJobs"
+        [jobFilter]="jobFilter"
+        (filtedJobsChange)="updateJobs($event)">
+      </app-filter-list>
+      <p class="filter-clear" (click)="clearSelectedSkills()">Clear</p>
+    </div>
+
+    <input type="text"  placeholder="Filter"
+      [value]="this.inputValue" (input)="this.inputValue=getValue($event)"
+      (focus)="focused()"
+      (keyup.enter)="addSkill()" />
+
+    <div class="filter-display">
+      <ul class="filter-level">
+        <li><strong>Levels</strong></li>
+        <li *ngFor="let lvl of level"
+            (click)="this.clickSkill(lvl.level)">{{lvl.level}}</li>
+      </ul>
+      <ul class="filter-type">
+        <li><strong>Types</strong></li>
+        <li *ngFor="let typo of typa"
+            (click)="this.clickSkill(typo.type)">{{typo.type}}</li>
+      </ul>
+      <ul class="filter-language">
+        <li><strong>Languages</strong></li>
+        <li *ngFor="let lang of language"
+            (click)="this.clickSkill(lang.language)">{{lang.language}}</li>
+      </ul>
+    </div>
+  <!-- </div> -->
+</div>
