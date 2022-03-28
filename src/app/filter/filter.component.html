@@ -37,65 +37,7 @@
     </div>
 </div>
 
-  <!-- <div class="filter-dropdown">
-    <form>
-      <input class="filter-input"
-        list="levels" placeholder="Level" />
-      <datalist id="levels">
-        <option *ngFor="let lvl of level"
-          [value]="lvl.level">{{lvl.level}}
-        </option>
-      </datalist>
-    </form>
-
-    <form>
-      <input class="filter-input"
-        list="types" placeholder="Type" />
-      <datalist id="types">
-        <option *ngFor="let typo of typa"
-          [value]="typo.type">{{typo.type}}
-        </option>
-      </datalist>
-    </form>
-
-    <form>
-      <input class="filter-input"
-        list="languages" placeholder="Language" />
-      <datalist id="languages">
-        <option *ngFor="let lang of language"
-          [value]="lang.language">{{lang.language}}
-        </option>
-      </datalist>
-    </form>
-  </div> -->
-
-  <!-- <app-filter-list [skills]=language></app-filter-list> -->
-
-  <!-- <div class="filter-droptest">
-    <form class="filter-form">
-      <select class="filter-search" multiple>
-        <optgroup label="Levels">
-          <option *ngFor="let lvl of level"
-            [value]="lvl.level">{{lvl.level}}
-          </option>
-        </optgroup>
-        <optgroup label="Types">
-          <option *ngFor="let typo of typa"
-            [value]="typo.type">{{typo.type}}
-          </option>
-        </optgroup>
-        <optgroup label="Languages">
-          <option *ngFor="let lang of language"
-            [value]="lang.language">{{lang.language}}
-          </option>
-        </optgroup>
-      </select>
-    </form>
-  </div> -->
-
-  <!-- <div class="filter-input-test"> -->
-
-    <div *ngIf="selectedSkills.length > 0" class="filter-skill">
+    <!-- <div *ngIf="selectedSkills.length > 0" class="filter-skill">
       <app-filter-list
         [(selectedSkills)]="selectedSkills"
         [(filtedJobs)]="filtedJobs"
@@ -127,6 +69,6 @@
         <li *ngFor="let lang of language"
             (click)="this.clickSkill(lang.language)">{{lang.language}}</li>
       </ul>
-    </div>
+    </div> -->
   <!-- </div> -->
-</div>
+<!-- </div> -->
