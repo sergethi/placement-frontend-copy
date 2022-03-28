@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import languages from '../_files/languages.json';
 import levels from '../_files/levels.json';
 import types from '../_files/types.json';
@@ -102,5 +103,21 @@ export class FilterComponent implements OnInit, Filter {
   // retrieve the value from the input field
   getValue(event: Event): string {
     return (event.target as HTMLInputElement).value;
+  }
+
+
+  // @ViewChild('myMenu') myMenu;
+
+  selected = new FormControl('valid', [
+    Validators.required,
+    Validators.pattern('valid')
+  ]);
+
+  isHovering = false;
+  onLeave() {
+    // if (this.myMenu.panelOpen) {
+    //   return;
+    // }
+    this.isHovering = false;
   }
 }

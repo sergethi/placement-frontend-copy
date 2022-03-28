@@ -1,11 +1,11 @@
 <div class='container'>
-  <div class='row'>
+  <div class='row banner'>
     <app-banner></app-banner>
   </div>
-  <div class="row">
-    <app-filter></app-filter>
+  <div class="row filter">
+    <app-filter class="filter-container"></app-filter>
   </div>
-  <div class='row' *ngFor="let job of jobsData">
+  <div class='row job-card' *ngFor="let job of jobsData">
     <app-job-card class='list' [job]= "job"></app-job-card>
   </div>
 </div>  

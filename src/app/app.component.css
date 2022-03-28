@@ -10,10 +10,30 @@
   /* position:fixed; */
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 10px;
+}
 
-/* .row {
-  border: 1px solid 
-} */
+.filter-container {
+  position: absolute;
+  top: 125px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width:1070px) {
+  .filter-container {
+    top: 90px;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .filter-container {
+    top: 85px;
+  }
+}
 
 @media screen and (max-width: 375px) {
   .container {

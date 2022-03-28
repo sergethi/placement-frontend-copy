@@ -11,6 +11,7 @@
   box-shadow: 3px 6px 20px -2px #9bc4c4;
   border-radius: 3px;
   border-left: 5px solid #5ca5a5;
+  /* border: 1px solid; */
 }
 
 .avatar {
@@ -104,6 +105,18 @@ span {
 
 }
 
+/* @media screen and (max-width:900px) {
+  .job-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      height: max-content;
+      margin-top: 60px;
+    }
+} */
+
 @media screen and (max-width:650px) {
   .job-card {
     display: flex;
@@ -138,9 +151,11 @@ span {
   .img-responsive {
     margin-bottom: 44px;
   }
+
   .img-responsive {
     width: 60px;
     max-height: 60px;
     border-radius: 100%;
   }
+
 }
