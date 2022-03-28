@@ -1,13 +1,18 @@
 <div class='container'>
-  <div class='row'>
+  <div class='row banner'>
     <app-banner></app-banner>
   </div>
-  <div class="row">
+  <div class="row filter">
+    <app-filter class="filter-container"></app-filter>
+  </div>
+  <div class='row job-card' *ngFor="let job of jobsData">
+
+<!--   <div class="row">
     <app-filter
       (filtedJobsChange)="updateJobs($event)">
     </app-filter>
   </div>
-  <div class='row' *ngFor="let job of filtedJobs">
+  <div class='row' *ngFor="let job of filtedJobs"> -->
     <app-job-card class='list' [job]= "job"></app-job-card>
   </div>
 </div>  
