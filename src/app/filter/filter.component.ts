@@ -129,4 +129,5 @@ export class FilterComponent implements OnInit, Filter {
     // }
     this.isHovering = false;
   }
+
 }
