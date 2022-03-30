@@ -51,7 +51,7 @@ export class FilterComponent implements OnInit, Filter {
 
   // pre-select skills and filter jobs
   ngOnInit(): void {
-    this.selectedSkills = ["HTML", "CSS", "Python"];
+    this.selectedSkills = [];
     this.jobFilter();
   }
   // hides the dropdown
