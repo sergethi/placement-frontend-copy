@@ -22,17 +22,17 @@
       >
       <ul class="filter-level">
         <li><strong>Levels</strong></li>
-        <li *ngFor="let lvl of level"
+        <li class="filter-display-list" *ngFor="let lvl of level"
             (click)="this.clickSkill(lvl.level)">{{lvl.level}}</li>
       </ul>
       <ul class="filter-type">
         <li><strong>Types</strong></li>
-        <li *ngFor="let typo of typa"
+        <li class="filter-display-list" *ngFor="let typo of typa"
             (click)="this.clickSkill(typo.type)">{{typo.type}}</li>
       </ul>
       <ul class="filter-language">
         <li><strong>Languages</strong></li>
-        <li *ngFor="let lang of language"
+        <li class="filter-display-list" *ngFor="let lang of language"
             (click)="this.clickSkill(lang.language)">{{lang.language}}</li>
       </ul>
     </div>

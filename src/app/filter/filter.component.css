@@ -99,10 +99,10 @@
   padding-left: 10px;
 }
 
-.filter-language {
+/* .filter-language { */
 
   /* border: 1px solid red; */
-}
+/* } */
 
 .filter-display ul li{
   list-style-type: none;
@@ -110,7 +110,8 @@
 }
 
 .filter-display ul li:hover {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-color: hsl(180, 52%, 96%);
 }
 
 .filter-display ul:last-child {
@@ -120,6 +121,10 @@
   -webkit-column-gap: 20px;
   column-count: 3;
   column-gap: 20px;
+}
+.filter-display-list{
+  color:#5ca5a5;
+  cursor: pointer;
 }
 
 
