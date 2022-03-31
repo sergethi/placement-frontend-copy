@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import data from "./_files/data.json";
 import { Jobs } from "./filter/filter.component";
 
 @Component({
@@ -9,26 +8,10 @@ import { Jobs } from "./filter/filter.component";
 })
 export class AppComponent {
   title = 'Placement';
-  jobsData: { 
-    id: number, 
-    company: String, 
-    logo: String, 
-    new: boolean, 
-    featured: boolean, 
-    position: String,
-    role: String,
-    level: String,
-    postedAt: String,
-    contract: String,
-    location: String,
-    languages: String[],
-    tools: String[] 
-  }[] = data;
   filtedJobs: Jobs[] = [];
 
+  // retrieve list of filted jobs from child component
   updateJobs(newList: Jobs[]): void {
     this.filtedJobs = newList;
   }
 }
-
-// https://github.com/cesarsnina/placement

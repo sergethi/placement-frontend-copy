@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { InfoComponent } from '../info/info.component';
-import data from "../_files/data.json"
-
+import { Jobs } from '../filter/filter.component';
 
 @Component({
   selector: 'app-job-card',
@@ -9,25 +7,9 @@ import data from "../_files/data.json"
   styleUrls: ['./job-card.component.css']
 })
 export class JobCardComponent implements OnInit {
-  @Input() 
-  job: any;
+  @Input() job: Jobs;
 
   constructor() { }
-  jobsData: { 
-    id: number, 
-    company: String, 
-    logo: String, 
-    new: boolean, 
-    featured: boolean, 
-    position: String,
-    role: String,
-    level: String,
-    postedAt: String,
-    contract: String,
-    location: String,
-    languages: String[],
-    tools: String[] 
-  }[] = data;
 
   ngOnInit(): void {
   }

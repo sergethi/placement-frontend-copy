@@ -6,7 +6,6 @@
   width: 100%;
   height: 108px;
   margin-right: 20px;
-  /* border: 1px solid; */
 }
 
 .top-info {
@@ -14,7 +13,6 @@
   flex-direction: row;
   padding: 4px;
   padding-left: 0px;
-  /* border: 1px solid; */
   width: max-content;
 }
 
@@ -27,7 +25,6 @@
   font-size: 13px;
   padding: 4px 4px 0px 0px;
   margin-right: 10px;
-  /* border: 1px solid red; */
 }
 
 .top-info-2 {
@@ -64,7 +61,6 @@
   font-weight: bold;
   font-size: 18px;
   color: #2b3939;
-  /* border: 1px solid; */
   padding-top: 10px;
   padding-left: 0px;
 }
@@ -81,7 +77,6 @@
   padding: 4px 6px;
   color: #7c8f8f;
   font-size: 13px;
-  /* border: 1px solid; */
 }
 
 .more-info-1 {
