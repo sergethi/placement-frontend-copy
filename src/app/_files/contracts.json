@@ -1,0 +1,9 @@
+[
+    { "contract": "Full Time" },
+    { "contract": "Part Time" },
+    { "contract": "Contract" },
+    { "contract": "Temporary" },
+    { "contract": "Volunteer" },
+    { "contract": "Internship" },
+    { "contract": "Apprenticeship" }
+]

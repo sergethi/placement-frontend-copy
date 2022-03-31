@@ -1,10 +1,9 @@
-
 import { Component, OnInit , Output, EventEmitter, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import languages from '../_files/languages.json';
-import levels from '../_files/levels.json';
-import types from '../_files/types.json';
-import data from "./../_files/data.json";
+import languages from './../_files/languages.json';
+import levels from './../_files/levels.json';
+import contracts from './../_files/contracts.json';
+import data from './../_files/data.json';
 
 export interface Jobs {
   id: number;
@@ -41,7 +40,7 @@ interface Filter {
 export class FilterComponent implements OnInit, Filter {
   language = languages;
   level = levels;
-  typa = types;
+  contracts = contracts;
   listOfJobs: Jobs[] = data;
   filtedJobs: Jobs[] = [];
   @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
@@ -75,8 +74,8 @@ export class FilterComponent implements OnInit, Filter {
       return;
     }
     this.filtedJobs = this.listOfJobs.filter((obj) => {
-      const { position, role, level, languages, tools } = obj;
-      const concat = `${position} ${role} ${level} ` +
+      const { position, role, level, contract, languages, tools } = obj;
+      const concat = `${position} ${role} ${level} ${contract}` +
                      `${languages.join(' ')} ${tools.join(' ')}`;
       const str = concat.toLowerCase();
       for (let skill of this.selectedSkills) {

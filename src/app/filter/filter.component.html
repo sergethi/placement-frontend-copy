@@ -30,9 +30,9 @@
           (click)="this.addSkill(lvl.level)">{{lvl.level}}</li>
     </ul>
     <ul class="filter-type">
-      <li><strong>Types</strong></li>
-      <li class="filter-display-list" *ngFor="let typo of typa"
-          (click)="this.addSkill(typo.type)">{{typo.type}}</li>
+      <li><strong>Contracts</strong></li>
+      <li class="filter-display-list" *ngFor="let contract of contracts"
+          (click)="this.addSkill(contract.contract)">{{contract.contract}}</li>
     </ul>
     <ul class="filter-language">
       <li><strong>Languages</strong></li>
