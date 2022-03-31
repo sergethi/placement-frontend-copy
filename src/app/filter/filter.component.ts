@@ -86,6 +86,9 @@ export class FilterComponent implements OnInit, Filter {
       }
       return false;
     });
+    if (this.filtedJobs.length < 1) {
+      this.filtedJobs = this.listOfJobs;
+    }
     this.filtedJobsChange.emit(this.filtedJobs);
   }
   // send list of job to the parent component (app.component)
