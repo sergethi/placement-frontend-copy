@@ -16,6 +16,7 @@ export class FilterListComponent implements OnInit {
   @Input() jobFilter: () => void;
 
   ngOnInit(): void {}
+
   // remove skill by clicking the X button
   removeSkill(talent: string): void {
     this.selectedSkills = this.selectedSkills

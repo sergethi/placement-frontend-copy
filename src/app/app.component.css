@@ -4,16 +4,12 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  /* border: 1px solid red; */
-  /* margin-top: 0px; */
-  /* top: 0px; */
   width: 100%;
 }
 
 .filter {
   display: flex;
   justify-content: center;
-  /* position: relative; */
   height: 100%;
   margin: 10px 0px;
 }
@@ -36,13 +32,10 @@
   }
 }
 
-
 @media screen and (max-width: 375px) {
   .container {
     display: flex;
-    /* flex-direction: erow; */
     align-items: center;
     margin: 0px;
-    /* width: 100%; */
   }
 }

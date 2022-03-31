@@ -1,10 +1,9 @@
-
 import { Component, OnInit , Output, EventEmitter, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import languages from '../_files/languages.json';
-import levels from '../_files/levels.json';
-import types from '../_files/types.json';
-import data from "./../_files/data.json";
+import languages from './../_files/languages.json';
+import levels from './../_files/levels.json';
+import contracts from './../_files/contracts.json';
+import data from './../_files/data.json';
 
 export interface Jobs {
   id: number;
@@ -27,8 +26,7 @@ interface Filter {
   filtedJobs: Jobs[];
   selectedSkills: string[];
   inputValue: string;
-  clickSkill(talent: string): void;
-  addSkill(event: EventTarget | null): void;
+  addSkill(skill: string): void;
   clearSelectedSkills(): void;
   jobFilter(): void;
   getValue(event: Event): string;
@@ -42,37 +40,22 @@ interface Filter {
 export class FilterComponent implements OnInit, Filter {
   language = languages;
   level = levels;
-  typa = types;
+  contracts = contracts;
   listOfJobs: Jobs[] = data;
   filtedJobs: Jobs[] = [];
   @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
   selectedSkills: string[];
   inputValue: string = "";
+  isHovering = false;
 
   // pre-select skills and filter jobs
   ngOnInit(): void {
     this.selectedSkills = [];
     this.jobFilter();
   }
-  // hides the dropdown
-  unfocused(): void {
-    const filterList = (<HTMLElement>document
-                          .getElementsByClassName("filter-display")[0])
-                          .style.display = "none";
-  }
-  // show the dropdown
-  focused(): void {
-    const filterList = (<HTMLElement>document
-                          .getElementsByClassName("filter-display")[0])
-                          .style.display = "flex";
-  }
-  // add skill by clicking on the dropdown
-  clickSkill(talent: string): void {
-    this.inputValue = talent;
-    this.addSkill();
-  }
-  // add skill by typing in the input field
-  addSkill(): void {
+  // add skill to filter to get the jobs with same skill
+  addSkill(skill: string): void {
+    this.inputValue = skill;
     this.selectedSkills.push(this.inputValue);
     this.inputValue = "";
     this.jobFilter();
@@ -91,8 +74,8 @@ export class FilterComponent implements OnInit, Filter {
       return;
     }
     this.filtedJobs = this.listOfJobs.filter((obj) => {
-      const { position, role, level, languages, tools } = obj;
-      const concat = `${position} ${role} ${level} ` +
+      const { position, role, level, contract, languages, tools } = obj;
+      const concat = `${position} ${role} ${level} ${contract}` +
                      `${languages.join(' ')} ${tools.join(' ')}`;
       const str = concat.toLowerCase();
       for (let skill of this.selectedSkills) {
@@ -102,6 +85,9 @@ export class FilterComponent implements OnInit, Filter {
       }
       return false;
     });
+    if (this.filtedJobs.length < 1) {
+      this.filtedJobs = this.listOfJobs;
+    }
     this.filtedJobsChange.emit(this.filtedJobs);
   }
   // send list of job to the parent component (app.component)
@@ -114,20 +100,10 @@ export class FilterComponent implements OnInit, Filter {
     return (event.target as HTMLInputElement).value;
   }
 
-
   // @ViewChild('myMenu') myMenu;
 
   selected = new FormControl('valid', [
     Validators.required,
     Validators.pattern('valid')
   ]);
-
-  isHovering = false;
-  onLeave() {
-    // if (this.myMenu.panelOpen) {
-    //   return;
-    // }
-    this.isHovering = false;
-  }
-
 }
