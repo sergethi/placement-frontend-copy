@@ -1,68 +1,52 @@
-.info {
+.info-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: space-between;
-  width: 100%;
-  height: 108px;
-  margin-right: 20px;
+  margin: 0 10px;
+  padding: 5px 0;
 }
 
 .top-info {
   display: flex;
   flex-direction: row;
-  padding: 4px;
-  padding-left: 0px;
   width: max-content;
+  margin: 5px;
 }
 
 .top-info-1 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   color: #5ca5a5;
   font-weight: 900;
-  font-size: 13px;
-  padding: 4px 4px 0px 0px;
-  margin-right: 10px;
+  font-size: .9rem;
+  padding-top: 4px;
+  margin-right: 8px;
 }
 
 .top-info-2 {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  padding: 4px;
-  padding-top: 8px;
-  margin-right: 8px;
   background-color: #5ca5a5;
-  border-radius: 500px;
-  font-size: 11px;
-  width: 45px;
+  margin-right: 8px;
 }
 
 .top-info-3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: black;
+}
+
+.top-info-2, .top-info-3 {
   color: white;
   font-weight: bold;
-  font-size: 11px;
-  padding: 4px;
-  padding-top: 8px;
-  background-color: black;
+  font-size: .68rem;
   border-radius: 500px;
-  width: 70px;
+  padding: 8px 8px 4px;
+}
+
+.title {
+  margin: 5px;
+  padding-top: 5px;
 }
 
 .role {
-  padding: 4px;
   font-weight: bold;
   font-size: 18px;
+  font-size: 1.13rem;
   color: #2b3939;
-  padding-top: 10px;
-  padding-left: 0px;
 }
 
 .role:hover {
@@ -70,53 +54,33 @@
   cursor: pointer;
 }
 
-.more-info-1,
-.more-info-2,
-.more-info-3,
-.bullet {
-  padding: 4px 6px;
-  color: #7c8f8f;
-  font-size: 13px;
-}
-
-.more-info-1 {
-  padding-left: 0px;
+.more-info {
+  margin: 5px;
+  width: max-content;
 }
 
 .bullet {
   font-weight: 100;
 }
 
-.more-info {
-  padding-top: 10px;
-  padding-bottom: 0;
+.more-info-1,
+.more-info-2,
+.more-info-3,
+.bullet {
+  margin: 3px;
+  color: #7c8f8f;
+  font-size: 13px;
+  font-size: .8rem;
 }
 
 @media screen and (max-width: 1070px) {
-  .info {
-    align-items: start;
-    justify-content: space-around;
+  .info-container {
     border-bottom: 1px solid gray;
-    padding-bottom: 20px;
-    margin-right: 0px;
+    align-items: center;
   }
 
   .role {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .info {
-    align-items: start;
-    justify-content: space-around;
-    border-bottom: 1px solid gray;
-    padding-bottom: 20px;
-    margin-right: 0px;
-    height: 108px;
-  }
-
-  .role {
-    font-size: 15px;
+    display: inline-block;
+    text-align: center;
   }
 }

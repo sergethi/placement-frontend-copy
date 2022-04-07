@@ -1,28 +1,25 @@
-  <div class=' col info' >
-    <div class='top-info' >
-        <span class='top-info-1' >{{item.company}}</span>
-        <ng-template [ngIf]="item.new">
-          <span class='top-info-2'>NEW!</span>
-        </ng-template>
-        <ng-template [ngIf]="item.featured">
-          <span class='top-info-3'>FEATURED</span>
-        </ng-template>
+  <div class='info-container'>
+    <div class='top-info'>
+      <span class='top-info-1' >{{item.company}}</span>
+
+      <ng-template [ngIf]="item.new">
+        <span class='top-info-2'>NEW!</span>
+      </ng-template>
+
+      <ng-template [ngIf]="item.featured">
+        <span class='top-info-3'>FEATURED</span>
+      </ng-template>
     </div>
+
     <div class='title'>
-        <span class='role'>{{item.position}}</span>
+      <span class='role'>{{item.position}}</span>
     </div>
+
     <div class='more-info'>
-        <span class='more-info-1'>{{item.postedAt}} </span> <span class='bullet'> &bull; </span>
-        <span class='more-info-2'>{{item.contract}}</span><span class='bullet'> &bull; </span>
-        <span class='more-info-3'>{{item.location}}</span>
+      <span class='more-info-1'>{{item.postedAt}}</span>
+      <span class='bullet'>&bull;</span>
+      <span class='more-info-2'>{{item.contract}}</span>
+      <span class='bullet'>&bull;</span>
+      <span class='more-info-3'>{{item.location}}</span>
     </div>
   </div>
-<!-- 
-
-NOTES
-
-NEW & FEATURED features are set as booleans 
-solution create inline logic to conditionally render text
-
- -->
-

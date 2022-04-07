@@ -30,6 +30,8 @@ interface Filter {
   clearSelectedSkills(): void;
   jobFilter(): void;
   getValue(event: Event): string;
+  onEnter(): void;
+  onLeave(): void;
 }
 
 @Component({
@@ -56,6 +58,7 @@ export class FilterComponent implements OnInit, Filter {
   // add skill to filter to get the jobs with same skill
   addSkill(skill: string): void {
     this.inputValue = skill;
+    if (this.selectedSkills.includes(this.inputValue)) return;
     this.selectedSkills.push(this.inputValue);
     this.inputValue = "";
     this.jobFilter();
@@ -98,6 +101,20 @@ export class FilterComponent implements OnInit, Filter {
   // retrieve the value from the input field
   getValue(event: Event): string {
     return (event.target as HTMLInputElement).value;
+  }
+  // display dropdown and create space to counter the position: absolute
+  onEnter(): void {
+    this.isHovering = true;
+    (<HTMLElement>document
+      .getElementsByClassName("filter-space")[0])
+      .style.display = "block";
+  }
+  // remove dropdown and the extra space
+  onLeave(): void {
+    this.isHovering = false;
+    (<HTMLElement>document
+      .getElementsByClassName("filter-space")[0])
+      .style.display = "none";
   }
 
   // @ViewChild('myMenu') myMenu;

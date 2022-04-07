@@ -7,11 +7,9 @@ import { Jobs } from '../filter/filter.component';
   styleUrls: ['./job-card.component.css']
 })
 export class JobCardComponent implements OnInit {
-  @Input() job: Jobs;
+  @Input() jobs: Jobs[];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
