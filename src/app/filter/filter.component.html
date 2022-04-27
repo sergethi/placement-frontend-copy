@@ -1,7 +1,7 @@
 <div class="filter-container"
-    (mouseenter)="isHovering=true" 
-    (mouseleave)="isHovering=false">
-  <div *ngIf=" selectedSkills.length > 0; else elseBlock" class="filter-skill">
+    (mouseenter)="onEnter()"
+    (mouseleave)="onLeave()">
+  <div class="filter-skill" *ngIf=" selectedSkills.length > 0; else elseBlock">
     <app-filter-list
       [(selectedSkills)]="selectedSkills"
       [(filtedJobs)]="filtedJobs"
@@ -9,17 +9,11 @@
       [jobFilter]="jobFilter"
       (filtedJobsChange)="updateJobs($event)">
     </app-filter-list>
+
     <p class="filter-clear" (click)="clearSelectedSkills()">Clear</p>
   </div>
 
-  <ng-template #elseBlock class="filter-skill">
-    <!-- <input type="text"  
-    placeholder="Filter"
-    class="filter-input"
-    [value]="this.inputValue" 
-    (input)="this.inputValue=getValue($event)"
-    (focus)="focused()"
-    (keyup.enter)="addSkill()" /> -->
+  <ng-template #elseBlock class="filter-placeHolder">
     <p class="filter-input"> Filter by skills </p>
   </ng-template>
 
@@ -27,17 +21,20 @@
     <ul class="filter-level">
       <li><strong>Levels</strong></li>
       <li class="filter-display-list" *ngFor="let lvl of level"
-          (click)="this.addSkill(lvl.level)">{{lvl.level}}</li>
+        (click)="this.addSkill(lvl.level)">{{lvl.level}}</li>
     </ul>
+
     <ul class="filter-type">
       <li><strong>Contracts</strong></li>
       <li class="filter-display-list" *ngFor="let contract of contracts"
-          (click)="this.addSkill(contract.contract)">{{contract.contract}}</li>
+        (click)="this.addSkill(contract.contract)">{{contract.contract}}</li>
     </ul>
+
     <ul class="filter-language">
       <li><strong>Languages</strong></li>
       <li class="filter-display-list" *ngFor="let lang of language"
-          (click)="this.addSkill(lang.language)">{{lang.language}}</li>
+        (click)="this.addSkill(lang.language)">{{lang.language}}</li>
     </ul>
   </div>
 </div>
+<span class="filter-space"></span>

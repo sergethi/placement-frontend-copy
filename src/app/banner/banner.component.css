@@ -1,57 +1,9 @@
-.toolbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.banner-container {
   height: 156px;
+  background-color: hsl(180, 29%, 50%);
+  min-width: 300px;
+}
+
+.banner-container svg {
   width: 100%;
-  background-color: #5ca5a5;
-  margin-bottom: 50px;
-  margin-top: 0px;
-  padding-top: 0px;
 }
-
-#schedule_link_pc {
-  display: inline-block;
-}
-
-#schedule_link_mobile {
-  display: none;
-}
-
-/* changed max-width from 900 to 500 */
-@media screen and (max-width: 500px) {
-  .toolbar {
-    width: 100%;
-    margin-bottom: 20px;
-    direction: ltr;
-  }
-  #schedule_link_pc {
-    display: none;
-  }
-
-  #schedule_link_mobile {
-    display: inline-block;
-  }
-}
-
-/* @media screen and (min-width: 1008px) {
-  .toolbar {
-    width: 100%;
-    margin-bottom: 20px;
-    align-content: flex-end;
-  }
-  path {
-    width: 100%;
-  }
-  #schedule_link_pc {
-    display: none;
-  }
-
-  #schedule_link_mobile {
-    display: none;
-  }
-
-  #schedule_link_pc_larger {
-    display: inline-block;
-  }
-} */

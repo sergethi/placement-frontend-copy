@@ -1,14 +1,7 @@
 .filter-list-container {
   display: inline-flex;
-  margin: .3rem;
+  margin-left: 10px;
   border-radius: 4px;
-}
-.filter-list-skill, .filter-list-close {
-  margin: 0;
-  padding: .3rem;
-  padding-bottom: .2rem;
-  height: 1.3rem;
-  font-size: 1.0rem;
 }
 
 .filter-list-skill {
@@ -37,4 +30,12 @@
 
 .filter-list-container:hover .filter-list-close {
   background-color: black;
+}
+
+.filter-list-skill, .filter-list-close {
+  margin: 0;
+  padding: .3rem;
+  padding-bottom: .2rem;
+  height: 1.3rem;
+  font-size: 1.0rem;
 }

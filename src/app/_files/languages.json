@@ -7,14 +7,14 @@
     { "language": "C#" },
     { "language": "PHP" },
     { "language": "Ruby" },
+    { "language": "Objective-C" },
     { "language": "SQL" },
     { "language": "Swift" },
+    { "language": "TypeScript" },
     { "language": "HTML" },
     { "language": "CSS" },
     { "language": "Dart" },
     { "language": "React" },
     { "language": "Angular" },
-    { "language": "TypeScript" },
-    { "language": "Kotlin" },
-    { "language": "Objective-C" }
+    { "language": "Kotlin" }
 ]
