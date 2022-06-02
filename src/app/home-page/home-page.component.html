@@ -1,0 +1,11 @@
+<div class="app-container">
+    <app-banner></app-banner>
+  
+    <app-filter
+      (filtedJobsChange)="updateJobs($event)">
+    </app-filter>
+    
+    <app-job-card
+      [jobs]="filtedJobs">
+    </app-job-card>
+  </div>  
