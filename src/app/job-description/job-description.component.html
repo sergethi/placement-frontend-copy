@@ -1,0 +1,22 @@
+<div class="job-descr-container">
+    <app-banner></app-banner>
+    <div class="avatar">
+        <img class='img-responsive' src={{jobDetail[jobId].logo}} alt={{jobDetail[jobId].company}} title={{jobDetail[jobId].company}}>
+      </div>
+    <app-info [item]= "jobDetail[jobId]"
+    ></app-info>
+    <div class="requirements">
+        <h3>Requirements</h3>
+        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aperiam ad veniam quae cumque necessitatibus. Aut similique accusantium aspernatur, non officiis perferendis maxime mollitia dicta tempore. Dignissimos dolor autem tempore!</p>
+
+    </div>
+    <div class='tech-skills' >
+        <span >{{jobDetail[jobId].role}}</span>
+        <span >{{jobDetail[jobId].level}}</span>
+        <span *ngFor="let language of jobDetail[jobId].languages">{{language}}</span>
+        <span *ngFor="let tool of jobDetail[jobId].tools">{{tool}}</span>
+      </div>
+    
+    
+
+</div>

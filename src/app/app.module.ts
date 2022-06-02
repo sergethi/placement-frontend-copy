@@ -9,6 +9,10 @@ import { InfoComponent } from './info/info.component';
 import { TestComponent } from './test/test.component';
 import { FilterComponent } from './filter/filter.component';
 import { FilterListComponent } from './filter/filter-list.component';
+import { JobDescriptionComponent } from './job-description/job-description.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { FilterListComponent } from './filter/filter-list.component';
     InfoComponent,
     TestComponent,
     FilterComponent,
-    FilterListComponent
+    FilterListComponent,
+    JobDescriptionComponent,
+    HomePageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
