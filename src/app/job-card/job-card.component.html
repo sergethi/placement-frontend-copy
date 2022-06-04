@@ -11,8 +11,7 @@
       <div class='tech-skills' >
         <span >{{job.role}}</span>
         <span >{{job.level}}</span>
-        <span *ngFor="let language of job.languages">{{language}}</span>
-        <span *ngFor="let tool of job.tools">{{tool}}</span>
+        <span *ngFor="let skills of job.Skills">{{skills.name}}</span>
       </div>
     </div>
   </div>

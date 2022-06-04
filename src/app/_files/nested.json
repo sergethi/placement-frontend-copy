@@ -1,0 +1,334 @@
+[
+    {
+        "id": 1,
+        "company": "Photosnap",
+        "logo": "./assets/images/photosnap.svg",
+        "new": true,
+        "featured": true,
+        "position": "Senior Frontend Developer",
+        "role": "Frontend",
+        "level": "Senior",
+        "postedAt": "1d ago",
+        "contract": "Full Time",
+        "location": "USA Only",
+        "createdAt": "2022-06-03T19:46:43.409Z",
+        "updatedAt": "2022-06-03T19:46:43.409Z",
+        "UserId": 5,
+        "Skills": [
+            {
+                "id": 13,
+                "name": "HTML",
+                "JobSkill": {
+                    "JobId": 1,
+                    "SkillId": 13
+                }
+            },
+            {
+                "id": 14,
+                "name": "CSS",
+                "JobSkill": {
+                    "JobId": 1,
+                    "SkillId": 14
+                }
+            },
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 1,
+                    "SkillId": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "company": "Manage",
+        "logo": "./assets/images/manage.svg",
+        "new": true,
+        "featured": true,
+        "position": "Fullstack Developer",
+        "role": "Fullstack",
+        "level": "Midweight",
+        "postedAt": "1d ago",
+        "contract": "Part Time",
+        "location": "Remote",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 5,
+        "Skills": [
+            {
+                "id": 3,
+                "name": "Python",
+                "JobSkill": {
+                    "JobId": 2,
+                    "SkillId": 3
+                }
+            },
+            {
+                "id": 16,
+                "name": "React",
+                "JobSkill": {
+                    "JobId": 2,
+                    "SkillId": 16
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "company": "Account",
+        "logo": "./assets/images/account.svg",
+        "new": true,
+        "featured": false,
+        "position": "Junior Frontend Developer",
+        "role": "Frontend",
+        "level": "Junior",
+        "postedAt": "2d ago",
+        "contract": "Part Time",
+        "location": "USA Only",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 5,
+        "Skills": [
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 3,
+                    "SkillId": 2
+                }
+            },
+            {
+                "id": 16,
+                "name": "React",
+                "JobSkill": {
+                    "JobId": 3,
+                    "SkillId": 16
+                }
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "company": "MyHome",
+        "logo": "./assets/images/myhome.svg",
+        "new": false,
+        "featured": false,
+        "position": "Junior Frontend Developer",
+        "role": "Frontend",
+        "level": "Junior",
+        "postedAt": "5d ago",
+        "contract": "Contract",
+        "location": "USA Only",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 5,
+        "Skills": [
+            {
+                "id": 14,
+                "name": "CSS",
+                "JobSkill": {
+                    "JobId": 4,
+                    "SkillId": 14
+                }
+            },
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 4,
+                    "SkillId": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "company": "Loop Studios",
+        "logo": "./assets/images/loop-studios.svg",
+        "new": false,
+        "featured": false,
+        "position": "Software Engineer",
+        "role": "Fullstack",
+        "level": "Midweight",
+        "postedAt": "1w ago",
+        "contract": "Full Time",
+        "location": "Worldwide",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 5,
+        "Skills": [
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 5,
+                    "SkillId": 2
+                }
+            },
+            {
+                "id": 8,
+                "name": "Ruby",
+                "JobSkill": {
+                    "JobId": 5,
+                    "SkillId": 8
+                }
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "company": "FaceIt",
+        "logo": "./assets/images/faceit.svg",
+        "new": false,
+        "featured": false,
+        "position": "Junior Backend Developer",
+        "role": "Backend",
+        "level": "Junior",
+        "postedAt": "2w ago",
+        "contract": "Full Time",
+        "location": "UK Only",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 9,
+        "Skills": [
+            {
+                "id": 8,
+                "name": "Ruby",
+                "JobSkill": {
+                    "JobId": 6,
+                    "SkillId": 8
+                }
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "company": "Shortly",
+        "logo": "./assets/images/shortly.svg",
+        "new": false,
+        "featured": false,
+        "position": "Junior Developer",
+        "role": "Frontend",
+        "level": "Junior",
+        "postedAt": "2w ago",
+        "contract": "Full Time",
+        "location": "Worldwide",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 9,
+        "Skills": [
+            {
+                "id": 13,
+                "name": "HTML",
+                "JobSkill": {
+                    "JobId": 7,
+                    "SkillId": 13
+                }
+            },
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 7,
+                    "SkillId": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "company": "Insure",
+        "logo": "./assets/images/insure.svg",
+        "new": false,
+        "featured": false,
+        "position": "Junior Frontend Developer",
+        "role": "Frontend",
+        "level": "Junior",
+        "postedAt": "2w ago",
+        "contract": "Full Time",
+        "location": "USA Only",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 9,
+        "Skills": [
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 8,
+                    "SkillId": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "company": "Eyecam Co.",
+        "logo": "./assets/images/eyecam-co.svg",
+        "new": false,
+        "featured": false,
+        "position": "Full Stack Engineer",
+        "role": "Fullstack",
+        "level": "Midweight",
+        "postedAt": "3w ago",
+        "contract": "Full Time",
+        "location": "Worldwide",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 9,
+        "Skills": [
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 9,
+                    "SkillId": 2
+                }
+            },
+            {
+                "id": 3,
+                "name": "Python",
+                "JobSkill": {
+                    "JobId": 9,
+                    "SkillId": 3
+                }
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "company": "The Air Filter Company",
+        "logo": "./assets/images/the-air-filter-company.svg",
+        "new": false,
+        "featured": false,
+        "position": "Front-end Dev",
+        "role": "Frontend",
+        "level": "Junior",
+        "postedAt": "1mo ago",
+        "contract": "Part Time",
+        "location": "Worldwide",
+        "createdAt": "2022-06-03T19:46:43.410Z",
+        "updatedAt": "2022-06-03T19:46:43.410Z",
+        "UserId": 9,
+        "Skills": [
+            {
+                "id": 2,
+                "name": "JavaScript",
+                "JobSkill": {
+                    "JobId": 10,
+                    "SkillId": 2
+                }
+            },
+            {
+                "id": 16,
+                "name": "React",
+                "JobSkill": {
+                    "JobId": 10,
+                    "SkillId": 16
+                }
+            }
+        ]
+    }
+]

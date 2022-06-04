@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,8 @@ import { JobDescriptionComponent } from './job-description/job-description.compo
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+// import { JobSkillsService } from './services/job-skills/job-skills.service';
+// import { JobSkillsModel } from './models/job-skills.model';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,14 @@ import { SignupComponent } from './signup/signup.component';
     JobDescriptionComponent,
     HomePageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    // JobSkillsService,
+    // JobSkillsModel
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
+    
     BrowserModule,
     AppRoutingModule
   ],

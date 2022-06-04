@@ -1,29 +1,18 @@
-import { Component, OnInit , Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+
 import languages from './../_files/languages.json';
 import levels from './../_files/levels.json';
 import contracts from './../_files/contracts.json';
-import data from './../_files/data.json';
+// import data from './../_files/data.json';
+// import nested from './../_files/nested.json'
 
-export interface Jobs {
-  id: number;
-  company: String;
-  logo: String;
-  new: boolean;
-  featured: boolean;
-  position: String;
-  role: String;
-  level: String;
-  postedAt: String;
-  contract: String;
-  location: String;
-  languages: String[];
-  tools: String[];
-}
+import { JobsService } from '../services/jobs.service';
+import { JobsModel } from '../models/jobs.model';
 
 interface Filter {
-  listOfJobs: Jobs[];
-  filtedJobs: Jobs[];
+  listOfJobs: JobsModel[];
+  filtedJobs: JobsModel[];
   selectedSkills: string[];
   inputValue: string;
   addSkill(skill: string): void;
@@ -40,18 +29,32 @@ interface Filter {
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit, Filter {
-  language = languages;
+  @Input() jobs?: JobsModel[];
+  skills = languages;
   level = levels;
   contracts = contracts;
-  listOfJobs: Jobs[] = data;
-  filtedJobs: Jobs[] = [];
-  @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
+  listOfJobs: JobsModel[];
+  filtedJobs: JobsModel[] = [];
+  @Output() filtedJobsChange = new EventEmitter<JobsModel[]>();
   selectedSkills: string[];
   inputValue: string = "";
   isHovering = false;
 
+  retrieveJobs(): void {
+    this.jobsService.getAll()
+      .subscribe({
+        next: (d) => {
+          this.listOfJobs = d;
+        },
+        error: (e) => console.error(e)
+      });
+  }
+
+  constructor(private jobsService: JobsService ) {}
+
   // pre-select skills and filter jobs
   ngOnInit(): void {
+    this.retrieveJobs();
     this.selectedSkills = [];
     this.jobFilter();
   }
@@ -77,9 +80,9 @@ export class FilterComponent implements OnInit, Filter {
       return;
     }
     this.filtedJobs = this.listOfJobs.filter((obj) => {
-      const { position, role, level, contract, languages, tools } = obj;
+      const { position, role, level, contract, Skills } = obj;
       const concat = `${position} ${role} ${level} ${contract}` +
-                     `${languages.join(' ')} ${tools.join(' ')}`;
+                     `${Skills.map(e => e.name).join(' ')}`;
       const str = concat.toLowerCase();
       for (let skill of this.selectedSkills) {
         if (str.includes(skill.toLowerCase())) {
@@ -94,7 +97,7 @@ export class FilterComponent implements OnInit, Filter {
     this.filtedJobsChange.emit(this.filtedJobs);
   }
   // send list of job to the parent component (app.component)
-  updateJobs(newList: Jobs[]): void {
+  updateJobs(newList: JobsModel[]): void {
     this.filtedJobs = newList;
     this.filtedJobsChange.emit(this.filtedJobs);
   }
@@ -117,7 +120,6 @@ export class FilterComponent implements OnInit, Filter {
       .style.display = "none";
   }
 
-  // @ViewChild('myMenu') myMenu;
 
   selected = new FormControl('valid', [
     Validators.required,

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Jobs } from '../filter/filter.component';
+import { JobsService } from '../services/jobs.service';
+import { JobsModel } from '../models/jobs.model';
+
 
 @Component({
   selector: 'app-job-card',
@@ -7,9 +9,20 @@ import { Jobs } from '../filter/filter.component';
   styleUrls: ['./job-card.component.css']
 })
 export class JobCardComponent implements OnInit {
-  @Input() jobs: Jobs[];
+  @Input() jobs?: JobsModel[];
+ 
+  constructor(private jobsService: JobsService ) {}
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  retrieveJobs(): void {
+    this.jobsService.getAll()
+      .subscribe({
+        next: (data) => {
+          this.jobs = data;
+        },
+        error: (e) => console.error(e)
+      });
+  }
+  ngOnInit(): void {
+    this.retrieveJobs();
+  }
 }
