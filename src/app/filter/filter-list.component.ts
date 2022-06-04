@@ -1,6 +1,6 @@
 import { Component, OnInit, Input,
          Output, EventEmitter } from '@angular/core';
-import { Jobs } from './filter.component';
+         import { JobsModel } from '../models/jobs.model';
 
 @Component({
   selector: 'app-filter-list',
@@ -10,9 +10,9 @@ import { Jobs } from './filter.component';
 export class FilterListComponent implements OnInit {
   @Input() selectedSkills: string[];
   @Output() selectedSkillsChange = new EventEmitter<string[]>();
-  @Input() listOfJobs: Jobs[];
-  @Input() filtedJobs: Jobs[];
-  @Output() filtedJobsChange = new EventEmitter<Jobs[]>();
+  @Input() listOfJobs: JobsModel[];
+  @Input() filtedJobs: JobsModel[];
+  @Output() filtedJobsChange = new EventEmitter<JobsModel[]>();
   @Input() jobFilter: () => void;
 
   ngOnInit(): void {}

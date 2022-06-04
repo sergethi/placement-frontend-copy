@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Jobs } from '../filter/filter.component';
+// import { Jobs } from '../filter/filter.component';
 
 @Component({
   selector: 'app-login',

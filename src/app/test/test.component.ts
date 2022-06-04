@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Jobs } from "../filter/filter.component";
+import { JobsModel } from '../models/jobs.model';
 
 @Component({
   selector: 'app-test',
@@ -7,7 +7,7 @@ import { Jobs } from "../filter/filter.component";
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  @Input() jobs: Jobs[];
+  @Input() jobs: JobsModel[];
   constructor() { }
 
   ngOnInit(): void {

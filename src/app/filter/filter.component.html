@@ -31,9 +31,9 @@
     </ul>
 
     <ul class="filter-language">
-      <li><strong>Languages</strong></li>
-      <li class="filter-display-list" *ngFor="let lang of language"
-        (click)="this.addSkill(lang.language)">{{lang.language}}</li>
+      <li><strong>Skills</strong></li>
+      <li class="filter-display-list" *ngFor="let skill of skills"
+        (click)="this.addSkill(skill.language)">{{skill.language}}</li>
     </ul>
   </div>
 </div>

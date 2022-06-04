@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Jobs } from '../filter/filter.component';
+// import { Jobs } from '../filter/filter.component';
+import { JobsModel } from '../models/jobs.model';
 
 @Component({
   selector: 'app-info',
@@ -7,7 +8,7 @@ import { Jobs } from '../filter/filter.component';
   styleUrls: ['./info.component.css']
 })
 export class InfoComponent implements OnInit {
-  @Input() item: Jobs;
+  @Input() item: JobsModel;
 
   constructor() { }
 

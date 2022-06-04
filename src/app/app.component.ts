@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Jobs } from "./filter/filter.component";
+// import { Jobs } from "./filter/filter.component";
+import { JobsModel } from './models/jobs.model';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,10 @@ import { Jobs } from "./filter/filter.component";
 })
 export class AppComponent {
   title = 'Placement';
-  filtedJobs: Jobs[] = [];
+  filtedJobs: JobsModel[] = [];
 
   // retrieve list of filted jobs from child component
-  updateJobs(newList: Jobs[]): void {
+  updateJobs(newList: JobsModel[]): void {
     this.filtedJobs = newList;
   }
 }
