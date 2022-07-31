@@ -48,12 +48,12 @@ h6:hover > span {
     font-size: 1.2em;
 }
 
-input[type="password"], input[type="text"] {
+input[type="password"], input[type="text"], input[type="email"] {
   border: 1px solid #a1a3a3;
   border-radius: 4px;
   box-shadow: 0 1px #fff;
   box-sizing: border-box;
-  color: #f8f2f2;
+  color: black;
   height: 39px;
   margin: 31px 0 0 29px;
   padding-left: 37px;
@@ -61,16 +61,19 @@ input[type="password"], input[type="text"] {
   width: 240px;
   box-shadow: 0px 5px 3px #999;
 }
-input[type="password"]:focus, input[type="text"]:focus {
+
+input[type="password"]:focus, input[type="text"]:focus, input[type="email"]:focus {
   box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
   outline: 0;
 }
+
 .show-password {
   display: block;
   height: 16px;
   margin: 26px 0 0 28px;
   width: 87px;
 }
+
 input[type="checkbox"] {
   cursor: pointer;
   height: 16px;
@@ -86,7 +89,7 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked + .toggle { background-position: 0 -16px }
 .forgot {
   color: #7f7f7f;
-  display: inline-block;
+  display: flex;
   float: right;
   font: 12px/1 sans-serif;
   left: -19px;
@@ -95,8 +98,10 @@ input[type="checkbox"]:checked + .toggle { background-position: 0 -16px }
   top: 5px;
   transition: color .4s;
 }
+
 .forgot:hover { color: #3b3b3b }
-input[type="submit"] {
+
+button[type="submit"] {
   width:240px;
   height:35px;
   display:block;
