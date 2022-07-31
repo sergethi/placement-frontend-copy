@@ -1,0 +1,17 @@
+.app-container {
+    margin-bottom: 20px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.i, p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid; */
+}

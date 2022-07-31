@@ -8,7 +8,7 @@
   margin: 20px auto 0;
   margin-top: 100px;
   width: 298px;
-  animation: shimmy 2s ;
+  /* animation: shimmy 2s ; */
 }
 @keyframes shimmy {
     0% {

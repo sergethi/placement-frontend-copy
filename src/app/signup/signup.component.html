@@ -1,10 +1,45 @@
 <app-banner></app-banner>
-<div class="login">
+<form class="login" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
     <h1>placement</h1>
-    <input type="text" placeholder="Username" id="username">  
-    <input type="password" placeholder="Password" id="password">  
-    <input type="password" placeholder="Repeat password" id="password">  
-    <input type="submit" value="Sign Up" routerLink="/">
+        <input
+            type="text" 
+            placeholder="First Name" 
+            id="firstname" 
+            name="firstname" 
+            formControlName="firstname"
+        >
+        <input
+            type="text" 
+            placeholder="Last Name" 
+            id="lastname" 
+            name="lastname" 
+            formControlName="lastname"
+        > 
+        <input
+            type="email" 
+            placeholder="Email" 
+            id="email" 
+            name="email" 
+            formControlName="email"
+        >
+        <input
+            type="password" 
+            placeholder="Password" 
+            id="password" 
+            name="password" 
+            formControlName="password"
+        >
+        <input
+            matInput
+            type="password" 
+            placeholder="Varify Password" 
+            id="verifypassword" 
+            name="verifypassword" 
+            formControlName="verifypassword"
+        >
+        <button 
+            type="submit" 
+        >Sign Up</button>
     <h6 class="signup" routerLink="/login">Already have an account? <span>Log In</span></h6>
-</div>
+</form>
 <div class="shadow"></div>
