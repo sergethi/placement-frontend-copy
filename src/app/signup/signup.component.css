@@ -48,9 +48,6 @@ h6:hover > span {
     font-size: 1.2em;
 }
 
-mat-form-field {
-  margin: 0;
-}
 input[type="password"], input[type="text"], input[type="email"] {
   border: 1px solid #a1a3a3;
   border-radius: 4px;

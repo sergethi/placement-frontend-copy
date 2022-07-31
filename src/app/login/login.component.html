@@ -1,10 +1,24 @@
 <app-banner></app-banner>
-<div class="login">
+<form class="login" [formGroup]="logInForm" (ngSubmit)="onSubmit()">
     <h1>placement</h1>
-    <input type="text" placeholder="Username" id="username">  
-    <input type="password" placeholder="Password" id="password">  
-    <a href="#" class="forgot">forgot password?</a>
-    <input type="submit" value="Log In" routerLink="/">
-    <h6 class="signup" routerLink="/signup">Don't have an account? <span>Sign Up</span></h6>
-</div>
+        <input
+            type="email" 
+            placeholder="Email" 
+            id="email" 
+            name="email" 
+            formControlName="email"
+        >
+        <input
+            type="password" 
+            placeholder="Password" 
+            id="password" 
+            name="password" 
+            formControlName="password"
+        >
+        <a href="#" class="forgot">forgot password?</a>
+        <button 
+            type="submit" 
+        >Log In</button>
+        <h6 class="signup" routerLink="/signup">Don't have an account? <span>Sign Up</span></h6>
+</form>
 <div class="shadow"></div>
