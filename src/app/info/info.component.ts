@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-// import { Jobs } from '../filter/filter.component';
+import {Router} from '@angular/router';
 import { JobsModel } from '../models/jobs.model';
 
 @Component({
@@ -10,7 +10,12 @@ import { JobsModel } from '../models/jobs.model';
 export class InfoComponent implements OnInit {
   @Input() item: JobsModel;
 
-  constructor() { }
+  constructor(private route:Router) { }
+
+  navigateToJob() {
+    console.log(this.item);
+    this.route.navigate(['/job-description']);
+  }
 
   ngOnInit(): void {}
 }
