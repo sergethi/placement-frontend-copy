@@ -1,20 +1,21 @@
 <div class="job-descr-container">
-    <app-banner></app-banner>
-    <div class="avatar">
-        <img class='img-responsive' src={{jobDetail[jobId].logo}} alt={{jobDetail[jobId].company}} title={{jobDetail[jobId].company}}>
-      </div>
-    <app-info [item]= "jobDetail[jobId]"
-    ></app-info>
-    <div class="requirements">
-        <h3>Requirements</h3>
-        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aperiam ad veniam quae cumque necessitatibus. Aut similique accusantium aspernatur, non officiis perferendis maxime mollitia dicta tempore. Dignissimos dolor autem tempore!</p>
-
-    </div>
-    <div class='tech-skills' >
-        <span >{{jobDetail[jobId].role}}</span>
-        <span >{{jobDetail[jobId].level}}</span>
-        <span *ngFor="let language of jobDetail[jobId].languages">{{language}}</span>
-        <span *ngFor="let tool of jobDetail[jobId].tools">{{tool}}</span>
-      </div>
-    
+  <app-banner></app-banner>
+  <div class="avatar">
+    <img class="img-responsive" src={{job.logo}} alt={{job.company}} title={{job.company}}>
+  </div>
+  <app-info [item]="job"></app-info>
+  <div class="requirements">
+    <h3>Requirements</h3>
+    <p class="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aperiam
+      ad veniam quae cumque necessitatibus. Aut similique accusantium
+      aspernatur, non officiis perferendis maxime mollitia dicta tempore.
+      Dignissimos dolor autem tempore!
+    </p>
+  </div>
+  <div class='tech-skills' >
+    <span >{{job.role}}</span>
+    <span >{{job.level}}</span>
+    <span *ngFor="let skills of job.Skills">{{skills.name}}</span>
+  </div>
 </div>
