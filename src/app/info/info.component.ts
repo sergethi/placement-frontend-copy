@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Router} from '@angular/router';
 import { JobsModel } from '../models/jobs.model';
+import { UsersService } from '../services/users.service';
+import { JobsService } from '../services/jobs.service';
 
 @Component({
   selector: 'app-info',
@@ -10,10 +12,10 @@ import { JobsModel } from '../models/jobs.model';
 export class InfoComponent implements OnInit {
   @Input() item: JobsModel;
 
-  constructor(private route:Router) { }
+  constructor(private route:Router, private userService: UsersService, private jobsService: JobsService) { }
 
   navigateToJob() {
-    console.log(this.item);
+    this.jobsService.currentJobId = this.item.id;
     this.route.navigate(['/job-description']);
   }
 

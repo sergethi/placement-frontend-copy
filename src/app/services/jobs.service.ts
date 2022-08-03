@@ -8,8 +8,17 @@ const getJobs = 'http://localhost:3005/jobs';
 })
 
 export class JobsService {
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
   getAll(): Observable<JobsModel[]> {
-    return this.http.get<JobsModel[]>(getJobs);
+    return this.http.get<JobsModel[]>(getJobs); 
   }
+
+  jobs: JobsModel[];
+  currentJobId: number = 1;
+
+  getCurrentJob(jobId: number): Observable<JobsModel> {
+    const  getJob = getJobs.concat('/', jobId.toString());
+    return this.http.get<JobsModel>(getJob);
+}
+
 }
