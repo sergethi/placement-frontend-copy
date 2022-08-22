@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { JobsModel } from '../models/jobs.model';
-const getJobs = 'http://localhost:3005/jobs';
+import { environment } from 'src/environments/environment';
+// const getJobs = 'http://localhost:3005/jobs';
+const getJobs = environment.baseUrl + "/jobs";
 @Injectable({
   providedIn: 'root'
 })
